@@ -16,12 +16,13 @@ func _ready():
 	Player = get_node("/root").find_node("Player", true, false)
 	
 func _process(delta):
-	if Player_in_FOV() and Player_in_LOS():
+	if is_Player_in_FOV() and is_Player_in_LOS():
 		$Torch.color = RED
+		get_tree().call_group("SuspicionMeter", "player_seen")
 	else:
 		$Torch.color = WHITE
 		
-func Player_in_FOV():
+func is_Player_in_FOV():
 	var npc_facing_derection = Vector2(1, 0).rotated(global_rotation)
 	var direction_to_Player = (Player.position - global_position).normalized()
 	
@@ -32,7 +33,7 @@ func Player_in_FOV():
 	else:
 		return false
 
-func Player_in_LOS():
+func is_Player_in_LOS():
 	
 	# Player-NPC間に障害があるかの判定
 	var space = get_world_2d().direct_space_state
@@ -42,6 +43,8 @@ func Player_in_LOS():
 		Player.global_position, 
 		[self], 
 		collision_mask)
+	# もしも何も衝突しなかったら戻る
+	# Playerが"Disguise"レイヤーにいるときも反応しない
 	if not LOS_obstacle:
 		return false
 		

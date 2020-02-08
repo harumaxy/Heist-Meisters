@@ -16,8 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Heist_Meisters"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="res://Levels/SplashScreen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+CombinationGenerator="*res://Levels/CombinationGenerator.gd"
+Music="*res://Levels/Music.tscn"
 
 [input]
 
@@ -46,12 +51,19 @@ toggle_vision_mode={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
+toggle_disguise={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [layer_names]
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Tilemap"
 2d_physics/layer_3="NPC"
+2d_physics/layer_4="Computers"
+2d_physics/layer_5="Disguise"
 
 [rendering]
 

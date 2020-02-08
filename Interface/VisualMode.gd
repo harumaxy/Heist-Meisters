@@ -14,16 +14,19 @@ var is_cooling = false
 func _ready():
 	visible = true 	# 暗すぎると、エディタで見えなくなるので、エディタ false -> 実行時 true にする
 	color = DARK
+	get_tree().call_group("Labels", "hide")
 
 # Vision Modeの切り替え
 # Group通信から呼び出す
 func cycle_vision_mode():
 	if color == NIGHTVISION:
 		DARK_mode()
+		get_tree().call_group("Labels", "hide")
 		$ActiveTimer.stop()
 		$CooldownTimer.start(3)
 	elif not is_cooling:
 		NIGHTVISION_mode()
+		get_tree().call_group("Labels", "show")
 		$ActiveTimer.start(3)
 		
 	

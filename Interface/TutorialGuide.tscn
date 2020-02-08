@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Heist-Meisters-Assets/GFX/Interface/PNG/glassPanel.png" type="Texture" id=1]
+[ext_resource path="res://Heist-Meisters-Assets/GFX/Interface/Fonts/NotoSansCJKjp-Regular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 2 )
+
+[node name="TutorialGuide" type="CanvasLayer"]
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GuideContainer" type="NinePatchRect" parent="Popup"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -270.0
+margin_top = -179.0
+margin_right = 271.0
+margin_bottom = -20.0
+texture = ExtResource( 1 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="Popup/GuideContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "ここにはチュートリアルTipsが表示される"
+__meta__ = {
+"_edit_use_anchors_": false
+}

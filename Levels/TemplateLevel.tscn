@@ -184,14 +184,23 @@ tile_data = PoolIntArray( -2, 2, 0, -1, 2, 2, -65536, 2, 2, -65535, 2, 2, -65534
 
 [node name="Furniture" type="TileMap" parent="Navigation2D"]
 tile_set = SubResource( 15 )
+collision_layer = 2
 format = 1
+tile_data = PoolIntArray( 65544, 536870915, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 276.061, 153.887 )
 
 [node name="VisualMode" parent="." instance=ExtResource( 4 )]
+visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="Cameras" type="Node" parent="."]
 
 [node name="Guards" type="Node" parent="."]
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="LockedDoors" type="Node" parent="."]
+
+[node name="Computers" type="Node" parent="."]
