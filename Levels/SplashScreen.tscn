@@ -40,9 +40,9 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
-margin_top = 35.0
+margin_top = 52.0
 margin_right = 360.0
-margin_bottom = 122.0
+margin_bottom = 139.0
 
 [node name="Label" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer"]
 margin_left = 66.0
@@ -54,9 +54,9 @@ Heist Meister
 "
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
-margin_top = 126.0
+margin_top = 143.0
 margin_right = 360.0
-margin_bottom = 156.0
+margin_bottom = 173.0
 
 [node name="Tutorial" type="Button" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer2"]
 margin_left = 117.0
@@ -66,9 +66,9 @@ rect_min_size = Vector2( 125, 30 )
 text = "Tutorial"
 
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
-margin_top = 160.0
+margin_top = 177.0
 margin_right = 360.0
-margin_bottom = 190.0
+margin_bottom = 207.0
 
 [node name="Level1" type="Button" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer3"]
 margin_left = 117.0
@@ -78,6 +78,7 @@ rect_min_size = Vector2( 125, 30 )
 text = "Level1"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+visible = false
 margin_top = 194.0
 margin_right = 360.0
 margin_bottom = 224.0

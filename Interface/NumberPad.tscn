@@ -9,19 +9,19 @@
 [ext_resource path="res://Heist-Meisters-Assets/GFX/Interface/PNG/metalPanel_redCorner.png" type="Texture" id=11]
 [ext_resource path="res://Interface/NumberPad.gd" type="Script" id=12]
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "Correct"
 tracks/0/type = "value"
 tracks/0/path = NodePath("VBoxContainer/ButtonContainer/GridContainer/StatusLight:modulate")
@@ -37,6 +37,7 @@ tracks/0/keys = {
 }
 
 [node name="NumberPad" type="Popup"]
+visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 300, 400 )
@@ -195,13 +196,13 @@ margin_top = 144.0
 margin_right = 136.0
 margin_bottom = 184.0
 rect_min_size = Vector2( 40, 40 )
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 text = "OK"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Correct = SubResource( 9 )
+anims/Correct = SubResource( 4 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

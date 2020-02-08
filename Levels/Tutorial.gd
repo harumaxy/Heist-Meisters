@@ -25,7 +25,7 @@ func _ready():
 
 func load_json():
 	var file = File.new()
-	file.open("res://Text/TutorialMessages.json", File.READ)
+	file.open("res://Text/TutorialTexts.tres", File.READ)
 	var content = file.get_as_text()
 	file.close()
 	return parse_json(content)

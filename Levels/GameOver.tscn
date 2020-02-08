@@ -40,9 +40,9 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
-margin_top = 65.0
+margin_top = 82.0
 margin_right = 360.0
-margin_bottom = 92.0
+margin_bottom = 109.0
 
 [node name="Label" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer"]
 margin_left = 94.0
@@ -52,9 +52,9 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "GAme Over"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
-margin_top = 96.0
+margin_top = 113.0
 margin_right = 360.0
-margin_bottom = 126.0
+margin_bottom = 143.0
 
 [node name="TryAgain" type="Button" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer2"]
 margin_left = 100.0
@@ -64,9 +64,9 @@ rect_min_size = Vector2( 160, 30 )
 text = "Try Again!"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
-margin_top = 130.0
+margin_top = 147.0
 margin_right = 360.0
-margin_bottom = 160.0
+margin_bottom = 177.0
 
 [node name="BackToTitle" type="Button" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer4"]
 margin_left = 100.0
@@ -76,6 +76,7 @@ rect_min_size = Vector2( 160, 30 )
 text = "BAck To Title"
 
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+visible = false
 margin_top = 164.0
 margin_right = 360.0
 margin_bottom = 194.0
